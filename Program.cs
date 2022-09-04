@@ -11,13 +11,26 @@ namespace DZ___1
         static void Main(string[] args)
         {
             String fullName = "Степанович Степан Степанов";
-            UInt32 age = 22;
+            ushort age = 22;
             String mail = @"StepanSuper@gmail.com";
-            UInt32 scoresProgramming = 76;
-            UInt32 scoresMathematics = 80;
-            UInt32 scoresPhysics = 60;
+            ushort scoresProgramming = 76;
+            ushort scoresMathematics = 80;
+            ushort scoresPhysics = 60;
 
-            Console.WriteLine("")
+            UInt32 allScores = 0;
+            UInt32 averageScore = 0;
+
+            Console.WriteLine($"Ф.И.О: {fullName};\n Возраст: {age};\n Почта: {mail};\n Баллы по программированию: {scoresProgramming};\n" +
+                $" Баллы по математике: {scoresMathematics};\n Баллы по физике: {scoresPhysics}");
+
+            Console.ReadLine();
+
+            allScores = (UInt32)(scoresProgramming + scoresMathematics + scoresPhysics);
+            averageScore = (UInt32)((scoresProgramming + scoresMathematics + scoresPhysics) / 3);
+
+            Console.WriteLine($"Общий балл: {allScores};\n Средний балл: {averageScore}");
+
+            Console.ReadLine();
         }
     }
 }
